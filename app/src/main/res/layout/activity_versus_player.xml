@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightBlue"
+    tools:context=".ui.versus.VersusPlayerActivity">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:contentDescription="@string/logo_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_title"
+        tools:ignore="ImageContrastCheck" />
+
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/comic_sans"
+        android:text="@string/player_1"
+        android:textColor="@color/colorBlue"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+    <TextView
+        android:id="@+id/tvTitlePlayerCom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/comic_sans"
+        android:text="@string/player2"
+        android:textColor="@color/colorBlue"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+    <ImageView
+        android:id="@+id/ivOptionRockP1"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/rock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/glOne"
+        app:srcCompat="@drawable/rock" />
+
+    <ImageView
+        android:id="@+id/ivOptionPaperP1"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/paper"
+        app:layout_constraintEnd_toEndOf="@+id/ivOptionRockP1"
+        app:layout_constraintStart_toStartOf="@+id/ivOptionRockP1"
+        app:layout_constraintTop_toBottomOf="@+id/ivOptionRockP1"
+        app:srcCompat="@drawable/paper" />
+
+    <ImageView
+        android:id="@+id/ivOptionScissorP1"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/scissor"
+        app:layout_constraintEnd_toEndOf="@+id/ivOptionPaperP1"
+        app:layout_constraintStart_toStartOf="@+id/ivOptionPaperP1"
+        app:layout_constraintTop_toBottomOf="@+id/ivOptionPaperP1"
+        app:srcCompat="@drawable/scissor" />
+
+    <ImageView
+        android:id="@+id/ivOptionRockP2"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/rock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/glOne"
+        app:srcCompat="@drawable/rock" />
+
+    <ImageView
+        android:id="@+id/ivOptionPaperP2"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/paper"
+        app:layout_constraintEnd_toEndOf="@+id/ivOptionRockP2"
+        app:layout_constraintStart_toStartOf="@+id/ivOptionRockP2"
+        app:layout_constraintTop_toBottomOf="@+id/ivOptionRockP2"
+        app:srcCompat="@drawable/paper" />
+
+    <ImageView
+        android:id="@+id/ivOptionScissorP2"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/scissor"
+        app:layout_constraintEnd_toEndOf="@+id/ivOptionPaperP2"
+        app:layout_constraintStart_toStartOf="@+id/ivOptionPaperP2"
+        app:layout_constraintTop_toBottomOf="@+id/ivOptionPaperP2"
+        app:srcCompat="@drawable/scissor" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="244dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="526dp" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:backgroundTint="@color/colorLightBlue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fontFamily="@font/comic_sans"
+        android:gravity="center"
+        android:padding="16dp"
+        android:rotation="330"
+        android:text="@string/vs"
+        android:textAlignment="center"
+        android:textColor="@color/colorRed"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/glTwo"
+        app:layout_constraintEnd_toStartOf="@+id/ivOptionPaperP2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ivOptionPaperP1"
+        app:layout_constraintTop_toTopOf="@+id/glOne" />
+
+    <ImageView
+        android:id="@+id/ivRefresh"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/refresh_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/refresh"
+        tools:ignore="RedundantDescriptionCheck" />
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/close" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
